@@ -17,7 +17,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           config_order: base
           config_timezone: Asia/Shanghai
-          repositories_skipped: Lingmo-OS
+          repositories_skipped: Lingmo-OS, kernel, linux-kernel-6.8.7, lingmo-linux-kernel-6.8.4, lingmo-grub2, libx11, lingmo-wine
           base: header, activity, community, repositories
           base_indepth: yes
           plugin_languages: yes
