@@ -20,7 +20,6 @@ jobs:
           base: header, activity, community, repositories
           base_indepth: yes
   deploy:
-    needs: build
     permissions:
       pages: write
       id-token: write
