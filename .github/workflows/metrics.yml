@@ -36,6 +36,8 @@ jobs:
           sparse-checkout: |
             metrics.svg
           sparse-checkout-cone-mode: false
+      - name: Debug
+        run: ls -la
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
