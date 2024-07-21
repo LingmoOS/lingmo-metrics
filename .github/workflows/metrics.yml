@@ -24,8 +24,6 @@ jobs:
           plugin_languages_categories: markup, programming
           plugin_languages_details: percentage, bytes-size, lines
           plugin_followup: yes
-          plugin_repositories: yes
-          plugin_repositories_starred: 4
     
   deploy:
     needs: github-metrics
