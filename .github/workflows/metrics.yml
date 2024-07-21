@@ -23,7 +23,11 @@ jobs:
           plugin_languages_categories: markup, programming
           plugin_languages_details: percentage, bytes-size, lines
           plugin_languages_skipped: Lingmo-OS
-          plugin_languages_limit: 8
+          plugin_followup: yes
+          plugin_repositories: yes
+          plugin_repositories_starred: 4
+          plugin_traffic: yes
+          plugin_projects: yes
     
   deploy:
     needs: github-metrics
