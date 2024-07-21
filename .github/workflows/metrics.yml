@@ -17,17 +17,15 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           config_order: base
           config_timezone: Asia/Shanghai
+          repositories_skipped: Lingmo-OS
           base: header, activity, community, repositories
           base_indepth: yes
           plugin_languages: yes
           plugin_languages_categories: markup, programming
           plugin_languages_details: percentage, bytes-size, lines
-          plugin_languages_skipped: Lingmo-OS
           plugin_followup: yes
           plugin_repositories: yes
           plugin_repositories_starred: 4
-          plugin_traffic: yes
-          plugin_projects: yes
     
   deploy:
     needs: github-metrics
@@ -42,8 +40,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          sparse-checkout: |
-            metrics.svg
+          sparse-checkout: metrics.svg
           sparse-checkout-cone-mode: false
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
