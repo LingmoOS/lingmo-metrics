@@ -1,0 +1,23 @@
+name: Metrics
+on:
+  schedule: [{cron: "0 0 * * *"}]
+  workflow_dispatch:
+  push: {branches: ["main"]}
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    environment: 
+      name: production
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          committer_gist: ${{ secrets.GIST }}
+          output_action: gist
+          config_order: base, isocalendar, languages
+          config_timezone: Asia/Shanghai
+          base: header, activity, community, repositories
+          base_indepth: yes
