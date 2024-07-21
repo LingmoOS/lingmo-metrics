@@ -19,6 +19,11 @@ jobs:
           config_timezone: Asia/Shanghai
           base: header, activity, community, repositories
           base_indepth: yes
+          plugin_languages: yes
+          plugin_languages_categories: markup, programming
+          plugin_languages_details: percentage, bytes-size, lines
+          plugin_languages_skipped: Lingmo-OS
+          plugin_languages_limit: 8
     
   deploy:
     needs: github-metrics
@@ -43,4 +48,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      
