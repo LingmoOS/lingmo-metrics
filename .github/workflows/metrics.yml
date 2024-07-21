@@ -19,18 +19,6 @@ jobs:
           config_timezone: Asia/Shanghai
           base: header, activity, community, repositories
           base_indepth: yes
-  build:
-    needs: github-metrics
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Upload Pages artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: ./public
   deploy:
     needs: build
     permissions:
