@@ -19,6 +19,7 @@ jobs:
           config_timezone: Asia/Shanghai
           base: header, activity, community, repositories
           base_indepth: yes
+    
   deploy:
     permissions:
       pages: write
@@ -28,6 +29,17 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            metrics.svg
+          sparse-checkout-cone-mode: false
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./lingmo-metrics
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      
