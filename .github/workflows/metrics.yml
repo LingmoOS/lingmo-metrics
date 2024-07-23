@@ -18,12 +18,12 @@ jobs:
           user: LingmoOS
           config_order: base
           config_timezone: Asia/Shanghai
-          repositories_skipped: Lingmo-OS, kernel, linux-kernel-6.8.7, lingmo-linux-kernel-6.8.4, lingmo-grub2, libx11, lingmo-wine, NextOS, lingmo-community, lingmo-system-build
           base: header, activity, community, repositories
           base_indepth: yes
           plugin_languages: yes
           plugin_languages_categories: markup, programming
           plugin_languages_details: percentage, bytes-size, lines
+          plugin_languages_ignored: Lingmo-OS, kernel, linux-kernel-6.8.7, lingmo-linux-kernel-6.8.4, lingmo-grub2, libx11, lingmo-wine, NextOS, lingmo-community, lingmo-system-build
           plugin_followup: yes
     
   deploy:
