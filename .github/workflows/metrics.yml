@@ -15,6 +15,7 @@ jobs:
         with:
           filename: metrics.svg
           token: ${{ secrets.METRICS_TOKEN }}
+          user: LingmoOS
           config_order: base
           config_timezone: Asia/Shanghai
           repositories_skipped: Lingmo-OS, kernel, linux-kernel-6.8.7, lingmo-linux-kernel-6.8.4, lingmo-grub2, libx11, lingmo-wine, NextOS, lingmo-community, lingmo-system-build
