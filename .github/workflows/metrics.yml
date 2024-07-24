@@ -25,6 +25,9 @@ jobs:
           plugin_languages_categories: markup, programming
           plugin_languages_details: percentage, bytes-size, lines
           plugin_followup: yes
+          plugin_lines: yes
+          plugin_lines_sections: history
+          plugin_lines_delay: 30
     
   deploy:
     needs: github-metrics
