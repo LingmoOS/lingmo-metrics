@@ -28,7 +28,7 @@ jobs:
           plugin_followup: yes
       - uses: actions/upload-artifact@v4
         with:
-          path: metrics_renders/metrics.svg
+          path: /metrics_renders/metrics.svg
     
   deploy:
     needs: github-metrics
