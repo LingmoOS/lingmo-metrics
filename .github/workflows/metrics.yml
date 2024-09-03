@@ -28,6 +28,7 @@ jobs:
           plugin_followup: yes
       - uses: actions/upload-artifact@v4
         with:
+          name: metrics
           path: /metrics_renders/metrics.svg
     
   deploy:
@@ -44,7 +45,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: metrics.svg
+          path: metrics/metrics.svg
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
